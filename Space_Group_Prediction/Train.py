@@ -84,7 +84,7 @@ def Total_train(epochs, dataloaders, Cuda, model, optimizer, scheduler, name, fo
             with open(name + '_Best.pt', 'wb') as fp:
                 state = model.state_dict()
                 torch.save(state, fp)
-    with open(name + '_Last.pt', 'wb') as fp:
+    with open(os.path.join('Space_Group_Prediction', name + '_Last.pt', 'wb')) as fp:
         state = model.state_dict()
         torch.save(state, fp)
 
@@ -96,17 +96,17 @@ def main():
     parser.add_argument('--epochs', type = int, default = 25)
     parser.add_argument('--training_data', type = str, default= '100K')
     parser.add_argument('--batch_size', type = int, default= 32)
-    parser.add_argument('--lr', type = int, default = 0.00001)
+    parser.add_argument('--lr', type = float, default = 0.00001)
     parser.add_argument('--gamma', type = float, default = 0.9)
     parser.add_argument('--patience', type = float, default = 2)
     args = parser.parse_args()
     seed_everything(7)
-    path_file = open(os.path.join('Paths', 'paths.json'))
+    path_file = open(os.path.join('Space_Group_Prediction', 'Paths', 'paths.json'))
     paths_data = json.load(path_file)[0]
     paths_data = paths_data[args.training_data]
     fold1 = paths_data['Fold1']
     fold2 = paths_data['Fold2']
-    SG_images_folder = os.path.join('Data', 'Powder_images')
+    SG_images_folder = os.path.join('Space_Group_Prediction','Data', 'Powder_images')
     dataloaders1 = SG_Dataloaders(args.batch_size, fold1, fold2, SG_images_folder)
     dataloaders2 = SG_Dataloaders(args.batch_size, fold2, fold1, SG_images_folder)
     Cuda = True
