@@ -7,7 +7,6 @@ import json
 import os
 import gemmi
 import torch
-import random
 
 
 def extract_ID(name):
@@ -84,22 +83,3 @@ def save_powder_image(intensities, ID):
     for i in range(20, 20 + len(intensities2)):
         Z[z == i] = intensities2[i-20]
     io.imsave(os.path.join('Data', 'Powder_images', ID+'.png'), img_as_ubyte(Z))
-
-
-def append_paths_info(paths_list):
-    random.shuffle(paths_list)
-    Coords_pahts_info = [{'1K': {'Train': paths_list[:600],
-                                 'Valid': paths_list[600:800],
-                                 'Test': paths_list[800:1000]}, 
-                        '50K': {'Train': paths_list[:30000],
-                                 'Valid': paths_list[30000:40000],
-                                 'Test': paths_list[40000:50000]}, 
-                        '150K': {'Train': paths_list[:130000],
-                                 'Valid': paths_list[130000: 140000],
-                                 'Test': paths_list[140000: 150000]}, 
-                     'All': {'Train': paths_list[:-20000],
-                                 'Valid': paths_list[-20000:-10000],
-                                 'Test': paths_list[-10000:]}}]
-    with open(os.path.join('Data','Paths_info', 'Paths.json'), 'w') as f:
-        json.dump(Coords_pahts_info, f, indent=2)
-    f.close()

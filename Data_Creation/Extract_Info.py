@@ -2,14 +2,13 @@ import os
 import glob
 import warnings
 from tqdm import tqdm
-from Utils import extract_ID, get_information, append_crystal_info, save_powder_image, append_paths_info
+from Data_Utils import extract_ID, get_information, append_crystal_info, save_powder_image
 
 warnings.filterwarnings("ignore")
 os.mkdir(os.path.join('Data'))
 os.mkdir(os.path.join('Data','Structures'))
 os.mkdir(os.path.join('Data','Powder_images'))
-os.mkdir(os.path.join('Data', 'Paths_info'))
-ls = glob.glob(os.path.join('cod','cif','**','*.cif'), recursive = True)
+ls = glob.glob(os.path.join('Data_Creation','Files','*.cif'), recursive = True)
 for i in tqdm(range(len(ls))):
     ID = extract_ID(ls[i])
     try: 
@@ -18,6 +17,3 @@ for i in tqdm(range(len(ls))):
         save_powder_image(intensities, ID)
     except: 
          continue
-
-ls2 = glob.glob(os.path.join('Data','Structures', '*.json'))
-append_paths_info(ls2)
