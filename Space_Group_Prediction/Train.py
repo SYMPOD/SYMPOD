@@ -81,10 +81,10 @@ def Total_train(epochs, dataloaders, Cuda, model, optimizer, scheduler, name, fo
         scheduler.step(train_loss)
         if best_accuracy is None or top5_accuracy > best_accuracy:
             best_accuracy = top5_accuracy
-            with open(name + '_Best.pt', 'wb') as fp:
+            with open(os.path.join('Space_Group_Prediction','Models' , name + '_Best.pt'), 'wb') as fp:
                 state = model.state_dict()
                 torch.save(state, fp)
-    with open(os.path.join('Space_Group_Prediction', name + '_Last.pt', 'wb')) as fp:
+    with open(os.path.join('Space_Group_Prediction', 'Models', name + '_Last.pt'), 'wb') as fp:
         state = model.state_dict()
         torch.save(state, fp)
 

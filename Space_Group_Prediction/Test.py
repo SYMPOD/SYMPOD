@@ -52,7 +52,7 @@ def main():
     paths_file = os.path.join('Space_Group_Prediction', 'Paths', 'paths.json')
     test_paths = json.load(open(paths_file))[0]['All']['Test'][-25000:]
     SG_images_folder = os.path.join('Space_Group_Prediction', 'Data', 'Powder_images')
-    _, _, test_dataloader = SG_Dataloaders(args.batch_size, json_paths_test=test_paths, image_folder=SG_images_folder)
+    test_dataloader = SG_Dataloaders(args.batch_size, None, None, SG_images_folder,  json_paths_test=test_paths)
     Cuda = True
     model1 = model_selector(args.model)
     model1.load_state_dict(torch.load(os.path.join('Space_Group_Prediction', 'Models', args.weights1)))
