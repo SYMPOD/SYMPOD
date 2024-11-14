@@ -4,6 +4,8 @@
 
 </div>
 
+![](imgs/Circ.png)
+
 ## Introduction
 
 In this repository we show how to use the SYMPOD dataset, how to create similar data from CIF files and how to train and test some machine learning models to predict space group from simmulated powder X-ray diffraction (PXRD) patterns using SYMPOD
@@ -14,7 +16,7 @@ We strongly suggest to download only the 'structures' folder if you only want to
 
 <br>
 
-## Dataset Structure
+## :open_file_folder: Dataset Structure
 
 The general data structure is shown below. For a more comprehensive view check the *Turorial/Tutorial.ipynb* file.
 
@@ -47,15 +49,15 @@ Data
 
 <br>
 
-## Requirements
+## :wrench: Requirements
 
 
 
-## Data Loading and Use
+## :arrow_double_up: Data Loading and Use
 
 We provide a tutorial notebook at *Turorial/Tutorial.ipynb* that provides a full explanation on how to load and visualize the data.
 
-## Data Creation Process
+## :crystal_ball: Data Creation Process
 
 We created the data following the approach explained on [PAPER]. To replicate this process run the following command, using some example CIF files in the *Data_Creation/Files* folder.
 
