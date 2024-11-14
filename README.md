@@ -4,9 +4,13 @@
 
 </div>
 
+<div align="center">
+
 ![](imgs/Circ.png)
 
-## Introduction
+</div>
+
+## :star2: Introduction
 
 In this repository we show how to use the SYMPOD dataset, how to create similar data from CIF files and how to train and test some machine learning models to predict space group from simmulated powder X-ray diffraction (PXRD) patterns using SYMPOD
 
@@ -53,7 +57,7 @@ Data
 
 
 
-## :arrow_double_up: Data Loading and Use
+## :chart_with_upwards_trend: Data Loading and Use
 
 We provide a tutorial notebook at *Turorial/Tutorial.ipynb* that provides a full explanation on how to load and visualize the data.
 
@@ -67,11 +71,11 @@ python Data_Creation/Extract_Info.py
 
 In the *Data_Creation/Data_Utils.py* file, you will find the main functions used to extract information from the CIF files and generate the simulated diffractograms and images. For a detailed mathematical explanation of the image generation process, go to the Methods section of [PAPER].
 
-## Machine Learning for Space Group Prediction
+## :robot: Machine Learning for Space Group Prediction
 
 Here we provide the codes for the space group prediction using the PXRD patterns from SYMPOD, described in [PAPER]. 
 
-### Computer Vision Models
+### :eyes: Computer Vision Models
 
 To train different computer vision models from scratch run the following command.
 
@@ -106,7 +110,7 @@ Note that the weights files names include all the hyperparameters of the model a
 
 If you want to replicate the results of [PAPER] download the pretrained models at [Drive](https://drive.google.com/drive/folders/1K_tu-JUu6ksK4c-2MM3lmG0ZzxSAScjI?usp=drive_link). Place the models inside the "Space_Group_Prediction/Models/" folder.
 
-### AutoML Models
+### :computer: AutoML Models
 
 To train and test the classic machine learning models using the PXRD patternsfrom SYMPOD with the H2O AutoML library, first download csv files at [Drive](linkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk), place them inside the *Space_Group_Prediction/AutoML_Data/* folder and then run the following command. 
 
@@ -114,6 +118,6 @@ To train and test the classic machine learning models using the PXRD patternsfro
 python Space_Group_Prediction/automl.py
 ```
 
-## Citation
+## :page_with_curl: Citation
 
 
