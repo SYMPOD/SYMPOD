@@ -118,8 +118,8 @@ def main():
     scheduler1 = ReduceLROnPlateau(optimizer1, factor = args.gamma, patience = args.patience, mode = 'min')
     scheduler2 = ReduceLROnPlateau(optimizer2, factor = args.gamma, patience = args.patience, mode = 'min')
     epochs = args.epochs
-    name1 = args.model + '_pretrained_' + args.pretrained + '_lr_' + str(round(args.lr, 6)) + '_bs_' + str(args.batch_size) + '_epochs_' + str(epochs) + '_gamma_' + str(round(args.gamma, 4)) + '_patience_' + str(args.patience) + '_data_' + str(args.training_data) + '_fold1'
-    name2 = args.model + '_pretrained_' + args.pretrained + '_lr_' + str(round(args.lr, 6)) + '_bs_' + str(args.batch_size) + '_epochs_' + str(epochs) + '_gamma_' + str(round(args.gamma, 4)) + '_patience_' + str(args.patience) + '_data_' + str(args.training_data) + '_fold2'
+    name1 = args.model + '_pretrained_' + args.pretrained + '_lr_' + str(round(args.lr, 6)) + '_bs_' + str(args.batch_size) + '_epochs_' + str(epochs) + '_gamma_' + str(round(args.gamma, 4)) + '_patience_' + str(int(args.patience)) + '_data_' + str(args.training_data) + '_fold1'
+    name2 = args.model + '_pretrained_' + args.pretrained + '_lr_' + str(round(args.lr, 6)) + '_bs_' + str(args.batch_size) + '_epochs_' + str(epochs) + '_gamma_' + str(round(args.gamma, 4)) + '_patience_' + str(int(args.patience)) + '_data_' + str(args.training_data) + '_fold2'
     Total_train(epochs, dataloaders1, Cuda, model1, optimizer1, scheduler1, name1, fold = 1)
     Total_train(epochs, dataloaders2, Cuda, model2, optimizer2, scheduler2, name2, fold = 2)
 

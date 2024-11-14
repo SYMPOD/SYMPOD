@@ -98,12 +98,12 @@ You can choose one of the following architectures in "*model_name*":
 
 For example, to train a swinv2 pretrained model, run the following command.
 ```
-CUDA_VISIBLE_DEVICES=<GPU_ID> python Space_Group_Prediction/Train.py --model swinv2 --pretrained True --epochs 25 --training_data 100K --batch_size 6 --lr 3.7e-06 --gamma 0.9 --patience 4
+CUDA_VISIBLE_DEVICES=<GPU_ID> python Space_Group_Prediction/Train.py --model swinv2 --pretrained True --epochs 25 --training_data 100K --batch_size 6 --lr 4e-06 --gamma 0.9 --patience 4
 ```
 
 Then, to test the model, run the following command:
 ```
-CUDA_VISIBLE_DEVICES=<GPU_ID> python Space_Group_Prediction/Test.py --model swinv2 --weights1 'swinv2_pretrained_True_lr_3.7e-06_bs_6_epochs_25_gamma_0.9_patience_4_data_100K_fold1_Best.pt' --weights2 'swinv2_pretrained_True_lr_3.7e-06_bs_6_epochs_25_gamma_0.9_patience_4_data_100K_fold2_Best.pt'
+CUDA_VISIBLE_DEVICES=<GPU_ID> python Space_Group_Prediction/Test.py --model swinv2 --weights1 'swinv2_pretrained_True_lr_4e-06_bs_6_epochs_25_gamma_0.9_patience_4_data_100K_fold1_Best.pt' --weights2 'swinv2_pretrained_True_lr_3.7e-06_bs_6_epochs_25_gamma_0.9_patience_4_data_100K_fold2_Best.pt'
 ```
 
 Note that the weights files names include all the hyperparameters of the model and the fold they were trained on.
