@@ -44,7 +44,7 @@ Data
 │
 └── Powder Images            <- Created radial images from PXRD patterns
 │   ├── ID0.png
-│   └── ID1.PNG
+│   └── ID1.png
 │   │   
 │   │   
 ```
