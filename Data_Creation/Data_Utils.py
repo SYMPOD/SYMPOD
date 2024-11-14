@@ -64,7 +64,7 @@ def append_crystal_info(json_name, id, space_group, alpha, beta, gamma, a, b, c,
             'intensities': intensities,
             'atoms': atoms
         }
-    with open(os.path.join('Data','Structures', json_name), 'w') as f:
+    with open(os.path.join('Data_Creation','Data','Structures', json_name), 'w') as f:
         json.dump(data, f, indent=2)
     f.close()
 
@@ -83,4 +83,4 @@ def save_powder_image(intensities, ID):
     Z = np.zeros(z.shape)
     for i in range(20, 20 + len(intensities2)):
         Z[z == i] = intensities2[i-20]
-    io.imsave(os.path.join('Data', 'Powder_images', ID+'.png'), img_as_ubyte(Z))
+    io.imsave(os.path.join('Data_Creation','Data', 'Powder_images', ID+'.png'), img_as_ubyte(Z))
