@@ -76,7 +76,8 @@ def save_powder_image(intensities, ID):
     intensities2 = torch.nn.functional.interpolate(intensities2, 1250).view(1250)
     intensities2 = intensities2.numpy()
     intensities2 = (intensities2/np.amax(intensities2))
-    v = np.linspace(-260, 260, 521)
+    v = np.linspace(-260, 260, 521) #Full circles
+    #v = np.linspace(0, 260, 521) 1/4 of circles
     x, y = np.meshgrid(v, v)
     z = np.round(((x**2 + y**2)**0.5)*5)
     Z = np.zeros(z.shape)
