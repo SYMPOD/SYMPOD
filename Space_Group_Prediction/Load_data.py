@@ -21,7 +21,7 @@ class Dataset_SG(Dataset):
     def __getitem__(self, index):
         folder = self.folder
         path = self.paths[index]
-        file = open(os.path.join('Space_Group_Prediction', path))
+        file = open(path)
         data = json.load(file)
         SG = data['space_group'] - 1
         ID = data['ID']

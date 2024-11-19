@@ -106,7 +106,7 @@ def main():
     paths_data = paths_data[args.training_data]
     fold1 = paths_data['Fold1']
     fold2 = paths_data['Fold2']
-    SG_images_folder = os.path.join('Space_Group_Prediction','Data', 'Powder_images')
+    SG_images_folder = os.path.join('Data', 'Powder_images')
     dataloaders1 = SG_Dataloaders(args.batch_size, fold1, fold2, SG_images_folder)
     dataloaders2 = SG_Dataloaders(args.batch_size, fold2, fold1, SG_images_folder)
     Cuda = True
