@@ -69,7 +69,7 @@ To install the packages clone this repository and run the following command.
 conda env --create -f SYMPOD_env.yml
 ```
 
-Then, install the corresponding version of the torch according to your resources.
+Then, install the corresponding version of torch according to your resources.
 
 
 ## :chart_with_upwards_trend: Data Loading and Use
