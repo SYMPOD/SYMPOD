@@ -74,7 +74,7 @@ Then, install the corresponding version of torch according to your resources.
 
 ## :chart_with_upwards_trend: Data Loading and Use
 
-We provide a tutorial notebook at *Turorial/Tutorial.ipynb* that provides a full explanation on how to load and visualize the data.
+We provide a tutorial notebook at *Turorial/Tutorial.ipynb* that provides a full explanation on how to load and visualize the data. Before running the experiments, the *Data* folder (following the Dataset Structure section) must be placed into the repository main folder.
 
 ## :crystal_ball: Data Creation Process
 
