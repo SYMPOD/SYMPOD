@@ -2,6 +2,10 @@
 
 # SYMPOD: A new benchmark for machine learning applied to powder X-ray diffraction
 
+[![Paper PDF](https://img.shields.io/badge/Paper-PDF-red.svg)](link)
+[![pytorch](https://img.shields.io/badge/PyTorch_1.10+-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/get-started/locally/)
+
+
 </div>
 
 <div align="center">
@@ -55,6 +59,17 @@ Data
 
 ## :wrench: Requirements
 
+- torch >= 2.5.1 (Recommended)
+- torchvision >= 0.20.1 (Recommended)
+- NVIDIA-GPU + CUDA >= 11.8 (Recommended)
+
+To install the packages clone this repository and run the following command.
+
+```
+conda env --create -f SYMPOD_env.yml
+```
+
+Then, install the corresponding version of the torch according to your resources.
 
 
 ## :chart_with_upwards_trend: Data Loading and Use
@@ -112,7 +127,7 @@ If you want to replicate the results of [PAPER] download the pretrained models a
 
 ### :computer: AutoML Models
 
-To train and test the classic machine learning models using the PXRD patternsfrom SYMPOD with the H2O AutoML library, first download csv files at [Drive](linkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk), place them inside the *Space_Group_Prediction/AutoML_Data/* folder and then run the following command. 
+To train and test the classic machine learning models using the PXRD patterns from SYMPOD with the H2O AutoML library, first download csv files at [Drive](linkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk), place them inside the *Space_Group_Prediction/AutoML_Data/* folder and then run the following command. 
 
 ```
 python Space_Group_Prediction/automl.py
