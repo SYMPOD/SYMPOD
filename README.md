@@ -74,7 +74,7 @@ Then, install the corresponding version of torch according to your resources.
 
 ## :chart_with_upwards_trend: Data Loading and Use
 
-We provide a tutorial notebook at *Turorial/Tutorial.ipynb* that provides a full explanation on how to load and visualize the data. Before running the experiments, the *Data* folder (following the Dataset Structure section) must be placed into the repository main folder.
+We provide a tutorial notebook at *Turorial/Tutorial.ipynb* that provides a full explanation on how to load and visualize the data. Before running the experiments, the *Data* folder (following the Dataset Structure section) must be downloaded and placed into the repository main folder.
 
 ## :crystal_ball: Data Creation Process
 
@@ -127,7 +127,7 @@ If you want to replicate the results of [PAPER] download the pretrained models a
 
 ### :computer: AutoML Models
 
-To train and test the classic machine learning models using the PXRD patterns from SYMPOD with the H2O AutoML library, first download csv files at [Drive](linkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk), place them inside the *Space_Group_Prediction/AutoML_Data/* folder and then run the following command. 
+To train and test the classic machine learning models using the PXRD patterns from SYMPOD with the H2O AutoML library, first download the csv files from the CSVs folder in [Science Data Bank](https://www.scidb.cn/en/detail?dataSetId=91574142078b45c79d532d97b294ed44), place them inside the *Space_Group_Prediction/AutoML_Data/* folder and then run the following command. 
 
 ```
 python Space_Group_Prediction/automl.py
