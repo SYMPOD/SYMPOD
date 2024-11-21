@@ -2,7 +2,7 @@
 
 # SYMPOD: A new benchmark for machine learning applied to powder X-ray diffraction
 
-[![Paper PDF](https://img.shields.io/badge/Paper-PDF-red.svg)](link)
+[![Paper PDF](https://img.shields.io/badge/Paper-PDF-blue.svg)](link)
 [![pytorch](https://img.shields.io/badge/PyTorch_1.10+-ee4c2c?logo=pytorch&logoColor=white)](https://pytorch.org/get-started/locally/)
 
 
@@ -16,7 +16,7 @@
 
 ## :star2: Introduction
 
-In this repository we show how to use the SYMPOD dataset, how to create similar data from CIF files and how to train and test some machine learning models to predict space group from simmulated powder X-ray diffraction (PXRD) patterns using SYMPOD
+In this repository we show how to use the SYMPOD dataset, how to create similar data from CIF files and how to train and test some machine learning models to predict space group from simmulated powder X-ray diffraction (PXRD) patterns using SYMPOD.
 
 You can download the SYMPOD dataset from [Science Data Bank](https://www.scidb.cn/en/detail?dataSetId=91574142078b45c79d532d97b294ed44).
 
